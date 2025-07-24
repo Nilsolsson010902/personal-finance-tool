@@ -18,8 +18,8 @@ A personal budgeting tool built with Python (FastAPI), PostgreSQL and React.
 ## Project Structure
 Explain briefly what's in `/backend`, `/frontend`, etc.
 
-## Database Schema
-[Uploading drawSQL-pgsql-export-2025-07-24 (4).sql…]()
+## Database Scheme
+
 
 See `backend/database/schema.sql` for full table definitions.
 
