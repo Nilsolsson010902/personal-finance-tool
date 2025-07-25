@@ -20,6 +20,7 @@ Explain briefly what's in `/backend`, `/frontend`, etc.
 
 ## Database Scheme
 
+![E/R Diagram](docs/budgettool-er.png)
 
 See `backend/database/schema.sql` for full table definitions.
 
