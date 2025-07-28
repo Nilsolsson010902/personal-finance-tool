@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, Literal
 from uuid import UUID
 from datetime import date
-
+from pydantics.recurring import RecurringEntryOut
 
 class EntryCreate(BaseModel):
     entry_name: str = Field(..., example="Groceries")
@@ -12,7 +12,6 @@ class EntryCreate(BaseModel):
     notes: Optional[str] = Field(None, example="Bought at ICA")
     budget_id: UUID = Field(..., example="b23e9c18-dffc-4bb1-a477-e6c4d9bbf210")
     category_name: str = Field(..., example="Food")
-
 
 
 class EntryUpdate(BaseModel):
@@ -28,7 +27,6 @@ class EntryUpdate(BaseModel):
         extra = "forbid"
 
 
-
 class EntryOut(BaseModel):
     entry_id: UUID
     entry_name: str
@@ -38,7 +36,8 @@ class EntryOut(BaseModel):
     notes: Optional[str]
     budget_id: UUID
     category_name: str
-    user_id: UUID  
+    user_id: UUID
+    recurring: Optional[RecurringEntryOut]  
 
     class Config:
         orm_mode = True
