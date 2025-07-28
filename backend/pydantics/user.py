@@ -7,7 +7,7 @@ class UserCreate(BaseModel):
     email: EmailStr = Field(..., example ="nilsjohn6@gmail.com")
     first_name: str = Field(..., example="Nils")
     last_name: str = Field(..., example="Olsson")
-    password_hash: str = Field(..., example="bacon0101")
+    password: str = Field(..., example="bacon0101")
 
 class UserOut(BaseModel):
     user_id: UUID
@@ -24,7 +24,7 @@ class UserUpdate(BaseModel):
     email: Optional[EmailStr] = Field(..., example = "nils.cool1@hotmail.com")
     first_name: Optional[str] = Field(..., example = "Emil")
     last_name: Optional[str] = Field(..., example = "Appelgren")
-    password_hash: Optional[str] = Field(..., example = "Bacon_0101")
+    password: Optional[str] = Field(..., example = "Bacon_0101")
 
     class Config:
         extra = "forbid"
