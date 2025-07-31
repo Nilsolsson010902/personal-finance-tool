@@ -1,6 +1,6 @@
-from sqlalchemy import Column, String, Date, Float, ForeignKey, Enum
+from sqlalchemy import Column, String, Date,ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
-from alchemy_models.base import Base
+from database.connection  import Base
 import uuid
 
 class Budget(Base):
