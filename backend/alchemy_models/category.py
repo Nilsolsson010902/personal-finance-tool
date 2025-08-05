@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Date, Float, ForeignKey, Enum
 from sqlalchemy.dialects.postgresql import UUID
-from models.base import Base
+from backend.database.connection  import Base
 import uuid
 
 class Category(Base):

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Date,ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
-from database.connection  import Base
+from backend.database.connection  import Base
 import uuid
 
 class Budget(Base):

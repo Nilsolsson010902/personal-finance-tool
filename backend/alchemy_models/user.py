@@ -1,7 +1,7 @@
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
-from database.connection import Base
+from backend.database.connection import Base
 import uuid
 
 class User(Base):
