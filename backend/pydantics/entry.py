@@ -4,13 +4,12 @@ from uuid import UUID
 from datetime import date
 from pydantics.recurring import RecurringEntryOut
 
-class EntryCreate(BaseModel):
+class EntryCreateInBudget(BaseModel):
     entry_name: str = Field(..., example="Groceries")
     amount: float = Field(..., gt=0, example=120.50)
     entry_date: date = Field(..., example="2025-08-01")
     type: Literal["income", "expense"] = Field(..., example="expense")
     notes: Optional[str] = Field(None, example="Bought at ICA")
-    budget_id: UUID = Field(..., example="b23e9c18-dffc-4bb1-a477-e6c4d9bbf210")
     category_name: str = Field(..., example="Food")
 
 
